@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "gyM1M4uNoQZDqiMv/eFqFj2SNRk2wYMeLQJ8FFf37pk8awjw9Ay+cm0/ElgAEZZjwEHp4oH9/k6eAzps2r0Jkw==",
+  "success": true,
+  "projectFilePath": "C:\\Git\\Tourister\\Vladoyak.Tourister\\Vladoyak.AllInOneApp\\Vladoyak.AllInOneApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
