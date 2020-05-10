@@ -12,7 +12,7 @@ namespace Vladoyak.TouristerConsoleApp
 
             // write all trails
             Console.WriteLine("TRAILS:");
-            foreach (var trail in app.Trails.Values)
+            foreach (var trail in app.GetTrails())
             {
                 Console.WriteLine($"  {trail}");
                 foreach (var point in trail.TrailPoints)
@@ -21,23 +21,15 @@ namespace Vladoyak.TouristerConsoleApp
                 }
             }
 
-            // write all signposts
-            Console.WriteLine("SIGNPOSTS:");
-            foreach (var signpost in app.Signposts.Values)
-            {
-                Console.WriteLine($"  {signpost}");
-                foreach (var directionSign in signpost.DirectionSigns)
-                {
-                    foreach (var direction in directionSign.Directions)
-                    {
-                        Console.WriteLine($"    {direction}");
-                    }
-                }
-            }
+            // one specific trail
+            var trail6006 = app.GetTrailByCode("6006");
+            Console.WriteLine(trail6006);
+
+           
 
             // write all trips
             Console.WriteLine("TRIPS:");
-            foreach (var trip in app.Trips.Values)
+            foreach (var trip in app.GetTrips())
             {
                 Console.WriteLine($"  {trip}");
                 foreach (var trailPointVisit in trip.TrailPointVisits)
