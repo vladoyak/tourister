@@ -14,3 +14,4 @@ C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.TouristerConsoleApp\obj\Debug\netco
 C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.TouristerConsoleApp\bin\Debug\netcoreapp3.1\Vladoyak.AllInOneApp.dll
 C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.TouristerConsoleApp\bin\Debug\netcoreapp3.1\Vladoyak.AllInOneApp.pdb
 C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.TouristerConsoleApp\obj\Debug\netcoreapp3.1\Vladoyak.TouristerConsoleApp.csproj.CopyComplete
+C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.TouristerConsoleApp\bin\Debug\netcoreapp3.1\System.Text.Json.dll

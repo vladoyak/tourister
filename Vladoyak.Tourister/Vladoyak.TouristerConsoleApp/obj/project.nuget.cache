@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ONO0gHnVX7VU8USDhyg7yBsACqLZd7kUH4dlabWdJr0vK1aimTsewnZKwW7sdJasxKigUp7jolB2+8mnh3odKA==",
+  "dgSpecHash": "fVF3HnKJWgSog2MTHhP2Fdnqg5WshY8IP1F0Lup5mBhowVz4ZBNFv7c0L1yl2G+RugNhc2PmKXinii9Z2jytBg==",
   "success": true,
   "projectFilePath": "C:\\Git\\Tourister\\Vladoyak.Tourister\\Vladoyak.TouristerConsoleApp\\Vladoyak.TouristerConsoleApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vlado\\.nuget\\packages\\system.text.json\\4.7.1\\system.text.json.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }

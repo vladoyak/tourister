@@ -1,11 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "gyM1M4uNoQZDqiMv/eFqFj2SNRk2wYMeLQJ8FFf37pk8awjw9Ay+cm0/ElgAEZZjwEHp4oH9/k6eAzps2r0Jkw==",
+  "dgSpecHash": "anxrFtQ80WZXdGlGQlesNtWY3cXwSyvp/RGI6UYqG8lP69VqU7+i/titVw+QXBCaImEcgR4p/krdGnRmHS+giA==",
   "success": true,
   "projectFilePath": "C:\\Git\\Tourister\\Vladoyak.Tourister\\Vladoyak.AllInOneApp\\Vladoyak.AllInOneApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\vlado\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\vlado\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\vlado\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
+    "C:\\Users\\vlado\\.nuget\\packages\\system.text.encodings.web\\4.7.0\\system.text.encodings.web.4.7.0.nupkg.sha512",
+    "C:\\Users\\vlado\\.nuget\\packages\\system.text.json\\4.7.1\\system.text.json.4.7.1.nupkg.sha512",
+    "C:\\Users\\vlado\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
   ],
   "logs": []
 }
