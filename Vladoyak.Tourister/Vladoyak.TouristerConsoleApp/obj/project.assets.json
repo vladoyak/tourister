@@ -68,11 +68,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\Tourister\\Vladoyak.Tourister\\Vladoyak.TouristerConsoleApp\\Vladoyak.TouristerConsoleApp.csproj",
+      "projectUniqueName": "C:\\Git\\tourister\\Vladoyak.Tourister\\Vladoyak.TouristerConsoleApp\\Vladoyak.TouristerConsoleApp.csproj",
       "projectName": "Vladoyak.TouristerConsoleApp",
-      "projectPath": "C:\\Git\\Tourister\\Vladoyak.Tourister\\Vladoyak.TouristerConsoleApp\\Vladoyak.TouristerConsoleApp.csproj",
+      "projectPath": "C:\\Git\\tourister\\Vladoyak.Tourister\\Vladoyak.TouristerConsoleApp\\Vladoyak.TouristerConsoleApp.csproj",
       "packagesPath": "C:\\Users\\vlado\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\Tourister\\Vladoyak.Tourister\\Vladoyak.TouristerConsoleApp\\obj\\",
+      "outputPath": "C:\\Git\\tourister\\Vladoyak.Tourister\\Vladoyak.TouristerConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -93,8 +93,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Git\\Tourister\\Vladoyak.Tourister\\Vladoyak.AllInOneApp\\Vladoyak.AllInOneApp.csproj": {
-              "projectPath": "C:\\Git\\Tourister\\Vladoyak.Tourister\\Vladoyak.AllInOneApp\\Vladoyak.AllInOneApp.csproj"
+            "C:\\Git\\tourister\\Vladoyak.Tourister\\Vladoyak.AllInOneApp\\Vladoyak.AllInOneApp.csproj": {
+              "projectPath": "C:\\Git\\tourister\\Vladoyak.Tourister\\Vladoyak.AllInOneApp\\Vladoyak.AllInOneApp.csproj"
             }
           }
         }

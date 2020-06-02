@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "anxrFtQ80WZXdGlGQlesNtWY3cXwSyvp/RGI6UYqG8lP69VqU7+i/titVw+QXBCaImEcgR4p/krdGnRmHS+giA==",
+  "dgSpecHash": "sf9UnZLCBwDirgq/c8BvvXWAmz9jvSBkkNtzV4xkxWjYrnd3WWpi/pBSAJPa36tbIPj7hXyD3wfPlx2l/rNy5g==",
   "success": true,
-  "projectFilePath": "C:\\Git\\Tourister\\Vladoyak.Tourister\\Vladoyak.AllInOneApp\\Vladoyak.AllInOneApp.csproj",
+  "projectFilePath": "C:\\Git\\tourister\\Vladoyak.Tourister\\Vladoyak.AllInOneApp\\Vladoyak.AllInOneApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vlado\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
