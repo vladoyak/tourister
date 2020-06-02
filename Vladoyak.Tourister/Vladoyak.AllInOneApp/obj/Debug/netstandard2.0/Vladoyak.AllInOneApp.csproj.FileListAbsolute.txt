@@ -1,9 +1,0 @@
-C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.AllInOneApp\bin\Debug\netstandard2.0\Vladoyak.AllInOneApp.deps.json
-C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.AllInOneApp\bin\Debug\netstandard2.0\Vladoyak.AllInOneApp.dll
-C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.AllInOneApp\bin\Debug\netstandard2.0\Vladoyak.AllInOneApp.pdb
-C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.AllInOneApp\obj\Debug\netstandard2.0\Vladoyak.AllInOneApp.csprojAssemblyReference.cache
-C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.AllInOneApp\obj\Debug\netstandard2.0\Vladoyak.AllInOneApp.AssemblyInfoInputs.cache
-C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.AllInOneApp\obj\Debug\netstandard2.0\Vladoyak.AllInOneApp.AssemblyInfo.cs
-C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.AllInOneApp\obj\Debug\netstandard2.0\Vladoyak.AllInOneApp.dll
-C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.AllInOneApp\obj\Debug\netstandard2.0\Vladoyak.AllInOneApp.pdb
-C:\Git\Tourister\Vladoyak.Tourister\Vladoyak.AllInOneApp\obj\Debug\netstandard2.0\Vladoyak.AllInOneApp.csproj.CoreCompileInputs.cache
