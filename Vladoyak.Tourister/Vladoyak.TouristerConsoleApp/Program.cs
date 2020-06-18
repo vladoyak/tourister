@@ -1,5 +1,6 @@
 ﻿using System;
 using Vladoyak.AllInOneApp;
+using Vladoyak.TouristerConsoleApp.Handlers;
 
 namespace Vladoyak.TouristerConsoleApp
 {
@@ -10,31 +11,42 @@ namespace Vladoyak.TouristerConsoleApp
             var app = new TouristerApp();
             app.Init();
 
-            // write all trails
-            Console.WriteLine("TRAILS:");
-            foreach (var trail in app.GetTrails())
+            IHandler _handler = new HelpHandler();
+            _handler.Handle();
+
+            bool exit = false;
+            while (!exit)
             {
-                Console.WriteLine($"  {trail}");
-                foreach (var point in trail.TrailPoints)
+                string rawInput = Console.ReadLine();
+                string[] words = rawInput.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+                if (words.Length == 0)
                 {
-                    Console.WriteLine($"    {point}");
+                    _handler = new HelpHandler();
+                    _handler.Handle();
                 }
-            }
-
-            // one specific trail
-            var trail6006 = app.GetTrailByCode("6006");
-            Console.WriteLine(trail6006);
-
-           
-
-            // write all trips
-            Console.WriteLine("TRIPS:");
-            foreach (var trip in app.GetTrips())
-            {
-                Console.WriteLine($"  {trip}");
-                foreach (var trailPointVisit in trip.TrailPointVisits)
+                else
                 {
-                    Console.WriteLine($"    {trailPointVisit}");
+                    switch (words[0])
+                    {
+                        case "exit":
+                            exit = true;
+                            break;
+                        case "trail":
+                            if (words.Length == 1)
+                                _handler = new TrailHandler(app);
+                            else
+                                _handler = new TrailByCodeHandler(app, words[1]);
+                            break;
+                        case "trip":
+                            _handler = new TripHandler(app);
+                            break;
+                        default:
+                            _handler = new HelpHandler();
+                            break;
+                    }
+
+                    _handler.Handle();                  
                 }
             }
         }
