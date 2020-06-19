@@ -18,8 +18,8 @@ namespace Vladoyak.TouristerConsoleApp.Handlers
 
         public void Handle()
         {
-            // write all trails
             _app.AddTrailPoint(_code, _name);
+            Console.WriteLine($"New trail point code:{_code} added");
         }
     }
 }

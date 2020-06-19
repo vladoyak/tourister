@@ -1,6 +1,7 @@
 ﻿using System;
 using Vladoyak.AllInOneApp;
 using Vladoyak.TouristerConsoleApp.Handlers;
+using Vladoyak.TouristerConsoleApp.Parsers;
 
 namespace Vladoyak.TouristerConsoleApp
 {
@@ -11,14 +12,13 @@ namespace Vladoyak.TouristerConsoleApp
             var app = new TouristerApp();
             app.Init();
 
-            IHandler _handler = new HelpHandler();
+            IHandler _handler = new IntroductionHandler();
             _handler.Handle();
-
-            bool exit = false;
-            while (!exit)
+                       
+            while (!(_handler is ExitHandler))
             {
                 string rawInput = Console.ReadLine();
-                _handler = new Parser(app).Parse(rawInput, ref exit);
+                _handler = new InputParser(app, rawInput).Parse();
                 _handler.Handle();
             }
         }
