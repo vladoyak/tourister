@@ -7,7 +7,7 @@ namespace Vladoyak.TouristerConsoleApp.Handlers
 {
     class TripHandler : IHandler
     {
-        private TouristerApp _app;
+        private readonly TouristerApp _app;
 
         public TripHandler(TouristerApp app)
         {

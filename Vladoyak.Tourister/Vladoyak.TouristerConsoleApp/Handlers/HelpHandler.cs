@@ -6,7 +6,7 @@ namespace Vladoyak.TouristerConsoleApp.Handlers
 {
     public class HelpHandler : IHandler
     {
-        private string[] _words;
+        private readonly string[] _words;
 
         public HelpHandler(string[] words)
         {

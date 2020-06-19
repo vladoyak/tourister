@@ -8,8 +8,8 @@ namespace Vladoyak.TouristerConsoleApp.Parsers
 {
     public class InputParser : IParser
     {
-        private TouristerApp _app;
-        private string _rawInput;
+        private readonly TouristerApp _app;
+        private readonly string _rawInput;
 
         public InputParser(TouristerApp app, string rawInput)
         {

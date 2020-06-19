@@ -5,7 +5,7 @@ namespace Vladoyak.TouristerConsoleApp.Handlers
 {
     internal class TrailHandler : IHandler
     {
-        private TouristerApp _app;     
+        private readonly TouristerApp _app;     
 
         public TrailHandler(TouristerApp app)
         {
