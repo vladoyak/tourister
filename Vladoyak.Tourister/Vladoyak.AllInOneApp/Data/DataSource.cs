@@ -27,6 +27,16 @@ namespace Vladoyak.AllInOneApp.Data
             LoadTrips();
         }
 
+        public void AddTrailPoint(TrailPoint trailPoint)
+        {
+            TrailPoints.Add(trailPoint.Code, trailPoint);            
+        }
+
+        public void RemoveTrailPoint(string code)
+        {
+            TrailPoints.Remove(code);
+        }
+
         private void LoadTrailPoints()
         {
             // read from JSON   

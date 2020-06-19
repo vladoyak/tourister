@@ -8,12 +8,12 @@ namespace Vladoyak.TouristerConsoleApp.Handlers
     {
         public void Handle()
         {
-            Console.WriteLine("Tourister App");
+            Console.WriteLine("TOURISTER APP");
             Console.WriteLine();
             Console.WriteLine("Possible commands:");
-            Console.WriteLine("");
-            Console.WriteLine("help - writes this help");
-            Console.WriteLine("exit - exists app");
+            Console.WriteLine("\thelp - writes this help");
+            Console.WriteLine("\texit - exits app");
+            Console.WriteLine();
         }
     }
 }

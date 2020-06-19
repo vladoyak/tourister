@@ -8,7 +8,7 @@ namespace Vladoyak.AllInOneApp
 {
     public class TouristerApp
     {
-        private DataSource _dataSource;    
+        private DataSource _dataSource;
 
         public void Init()
         {
@@ -60,7 +60,33 @@ namespace Vladoyak.AllInOneApp
             return _dataSource.Trips.Values;
         }
 
+        /// <summary>
+        /// Get all <see cref="TrailPoint">trail points</see>.
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<TrailPoint> GetTrailPoints()
+        {
+            return _dataSource.TrailPoints.Values;
+        }
 
-    
+        /// <summary>
+        /// Adds new <see cref="TrailPoint"></see>.
+        /// </summary>
+        /// <param name="code">Code of trail point.</param>
+        /// <param name="name">Name of trail point.</param>
+        public void AddTrailPoint(string code, string name)
+        {
+            var trailPoint = new TrailPoint
+            {
+                Code = code,
+                Name = name,
+            };
+            _dataSource.AddTrailPoint(trailPoint);
+        }
+
+        public void RemoveTrailPoint(string code)
+        {
+            _dataSource.RemoveTrailPoint(code);
+        }
     }
 }
