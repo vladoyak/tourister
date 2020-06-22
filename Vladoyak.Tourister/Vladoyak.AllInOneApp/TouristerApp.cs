@@ -88,5 +88,10 @@ namespace Vladoyak.AllInOneApp
         {
             _dataSource.RemoveTrailPoint(code);
         }
+
+        public void Save()
+        {
+            _dataSource.Save();
+        }
     }
 }

@@ -11,9 +11,19 @@ namespace Vladoyak.AllInOneApp.Data
 {
     class DataSource
     {
+        private readonly string _trailPointsFileName;
+        private readonly string _trailsFileName;
+        private readonly string _tripsFileName;
         public Dictionary<string, TrailPoint> TrailPoints { get; set; } = new Dictionary<string, TrailPoint>();
         public Dictionary<string, Trail> Trails { get; set; } = new Dictionary<string, Trail>();
         public Dictionary<string, Trip> Trips { get; set; } = new Dictionary<string, Trip>();
+
+        public DataSource()
+        {
+            _trailPointsFileName = "trailpoints.json";
+            _trailsFileName = "trails.json";
+            _tripsFileName = "trips.json";
+        }
 
         public void Init()
         {
@@ -27,9 +37,37 @@ namespace Vladoyak.AllInOneApp.Data
             LoadTrips();
         }
 
+        public void Save()
+        {
+            SaveTrailPoints();
+            SaveTrails();
+            SaveTrips();
+        }
+
+        public void SaveTrailPoints()
+        {
+            // serialize like json and save
+            var serialized = JsonSerializer.Serialize(TrailPoints.Values, typeof(IEnumerable<TrailPoint>));
+            File.WriteAllText(_trailPointsFileName, serialized);
+        }
+
+        public void SaveTrails()
+        {
+            // serialize like json and save
+            var serialized = JsonSerializer.Serialize(Trails.Values, typeof(IEnumerable<Trail>));
+            File.WriteAllText(_trailsFileName, serialized);
+        }
+
+        public void SaveTrips()
+        {
+            // serialize like json and save
+            var serialized = JsonSerializer.Serialize(Trips.Values, typeof(IEnumerable<Trip>));
+            File.WriteAllText(_tripsFileName, serialized);
+        }
+
         public void AddTrailPoint(TrailPoint trailPoint)
         {
-            TrailPoints.Add(trailPoint.Code, trailPoint);            
+            TrailPoints.Add(trailPoint.Code, trailPoint);
         }
 
         public void RemoveTrailPoint(string code)
@@ -39,10 +77,8 @@ namespace Vladoyak.AllInOneApp.Data
 
         private void LoadTrailPoints()
         {
-            // read from JSON   
-            string fileName = "trailpoints.json";
-
-            var serialized = File.ReadAllText(fileName);
+            // read from JSON
+            var serialized = File.ReadAllText(_trailPointsFileName);
             TrailPoints = JsonSerializer.Deserialize<IEnumerable<TrailPoint>>(serialized).ToDictionary(tp => tp.Code, tp => tp);
 
             //TrailPoints.Add("AB061", new TrailPoint
@@ -122,16 +158,13 @@ namespace Vladoyak.AllInOneApp.Data
             //    Signpost = new Signpost()
             //});
 
-            //var serialized = JsonSerializer.Serialize(TrailPoints.Values, typeof(IEnumerable<TrailPoint>));
-            //File.WriteAllText(fileName, serialized);
+
         }
 
         private void LoadTrails()
         {
-            // read from JSON          
-            string fileName = "trails.json";
-
-            var serialized = File.ReadAllText(fileName);
+            // read from JSON
+            var serialized = File.ReadAllText(_trailsFileName);
             Trails = JsonSerializer.Deserialize<IEnumerable<Trail>>(serialized).ToDictionary(t => t.Code, t => t);
 
             //Trails.Add("6006", new Trail
@@ -153,7 +186,7 @@ namespace Vladoyak.AllInOneApp.Data
                 trail.TrailPoints = new List<TrailPoint>();
                 foreach (var code in trail.TrailPointsCodes)
                 {
-                    var trailPoint = TrailPoints[code];                   
+                    var trailPoint = TrailPoints[code];
                     trail.TrailPoints.Add(trailPoint);
                 }
             }
@@ -163,21 +196,22 @@ namespace Vladoyak.AllInOneApp.Data
         {
             foreach (var trailPoint in TrailPoints.Values)
             {
-                trailPoint.Trails = new HashSet<Trail>();
-                foreach (var trailCode in trailPoint.TrailsCodes)
+                if (trailPoint.Trails != null)
                 {
-                    var trail = Trails[trailCode];                   
-                    trailPoint.Trails.Add(trail);
+                    trailPoint.Trails = new HashSet<Trail>();
+                    foreach (var trailCode in trailPoint.TrailsCodes)
+                    {
+                        var trail = Trails[trailCode];
+                        trailPoint.Trails.Add(trail);
+                    }
                 }
             }
         }
 
         private void LoadTrips()
         {
-            // read from JSON   
-            string fileName = "trips.json";
-
-            var serialized = File.ReadAllText(fileName);
+            // read from JSON        
+            var serialized = File.ReadAllText(_tripsFileName);
             Trips = JsonSerializer.Deserialize<IEnumerable<Trip>>(serialized).ToDictionary(t => t.Code, t => t);
 
             //Trips.Add("20200509", new Trip
@@ -213,9 +247,6 @@ namespace Vladoyak.AllInOneApp.Data
             //        }
             //    }
             //});
-
-            //var serialized = JsonSerializer.Serialize(Trips.Values, typeof(IEnumerable<Trip>));
-            //File.WriteAllText(fileName, serialized);
         }
     }
 }
