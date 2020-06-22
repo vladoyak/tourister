@@ -8,10 +8,10 @@ namespace Vladoyak.TouristerConsoleApp.Parsers
 {
     class TrailPointParser : IParser
     {
-        private readonly TouristerApp _app;
+        private readonly ITouristerApp _app;
         private readonly string[] _words;
 
-        public TrailPointParser(TouristerApp app, string[] words)
+        public TrailPointParser(ITouristerApp app, string[] words)
         {
             _app = app;
             _words = words;

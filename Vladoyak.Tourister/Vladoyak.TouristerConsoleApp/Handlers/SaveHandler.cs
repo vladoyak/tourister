@@ -6,9 +6,9 @@ namespace Vladoyak.TouristerConsoleApp.Handlers
 {
     internal class SaveHandler : IHandler
     {
-        private TouristerApp _app;
+        private ITouristerApp _app;
 
-        public SaveHandler(TouristerApp app)
+        public SaveHandler(ITouristerApp app)
         {
             _app = app;
         }

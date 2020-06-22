@@ -7,10 +7,10 @@ namespace Vladoyak.TouristerConsoleApp.Handlers
 {
     public class TrailByCodeHandler : IHandler
     {
-        private readonly TouristerApp _app;
+        private readonly ITouristerApp _app;
         private readonly string _trailCode;
       
-        public TrailByCodeHandler(TouristerApp app, string trailCode)
+        public TrailByCodeHandler(ITouristerApp app, string trailCode)
         {
             _app = app;
             _trailCode = trailCode;

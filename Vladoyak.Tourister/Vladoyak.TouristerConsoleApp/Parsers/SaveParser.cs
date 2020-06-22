@@ -8,10 +8,10 @@ namespace Vladoyak.TouristerConsoleApp.Parsers
 {
     public class SaveParser : IParser
     {
-        private readonly TouristerApp _app;
+        private readonly ITouristerApp _app;
         private readonly string[] _words;
 
-        public SaveParser(TouristerApp app, string[] words)
+        public SaveParser(ITouristerApp app, string[] words)
         {
             _app = app;
             _words = words;

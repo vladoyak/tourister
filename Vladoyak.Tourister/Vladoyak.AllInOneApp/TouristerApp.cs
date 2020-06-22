@@ -6,7 +6,7 @@ using Vladoyak.AllInOneApp.DomainObjects;
 
 namespace Vladoyak.AllInOneApp
 {
-    public class TouristerApp
+    public class TouristerApp: ITouristerApp
     {
         private DataSource _dataSource;
 

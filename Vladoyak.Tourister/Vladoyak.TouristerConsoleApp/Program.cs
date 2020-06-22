@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using Vladoyak.AllInOneApp;
 using Vladoyak.TouristerConsoleApp.Handlers;
 using Vladoyak.TouristerConsoleApp.Parsers;
@@ -9,12 +10,20 @@ namespace Vladoyak.TouristerConsoleApp
     {
         static void Main(string[] args)
         {
-            var app = new TouristerApp();
+            // dependency injection
+            var serviceProvider = new ServiceCollection()
+                .AddSingleton<ITouristerApp, TouristerApp>()
+                .BuildServiceProvider();
+
+            // get app instance
+            var app = serviceProvider.GetService<ITouristerApp>();
             app.Init();
 
+            // introduction
             IHandler _handler = new IntroductionHandler();
             _handler.Handle();
                        
+            // parsing and handling commands till the end
             while (!(_handler is ExitHandler))
             {
                 string rawInput = Console.ReadLine();
