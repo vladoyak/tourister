@@ -38,7 +38,7 @@ namespace Vladoyak.TouristerConsoleApp.Parsers
                             return new TrailByCodeHandler(_app, words[1]);
                         }
                     case "trip":
-                        return new TripHandler(_app);
+                        return new TripParser(_app, words).Parse();
                     case "trailpoint":
                         return new TrailPointParser(_app, words).Parse();
                     case "save":

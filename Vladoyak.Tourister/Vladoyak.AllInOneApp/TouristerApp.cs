@@ -84,6 +84,23 @@ namespace Vladoyak.AllInOneApp
             _dataSource.AddTrailPoint(trailPoint);
         }
 
+        /// <summary>
+        /// Adds new <see cref="Trip">trip.</see>.
+        /// </summary>
+        /// <param name="code">Code of trip.</param>
+        /// <param name="year">Year of trip.</param>
+        /// <param name="month">Month of trip.</param>
+        /// <param name="day">Dat of trip.</param>
+        public void AddTrip(string code, int year, int month, int day)
+        {
+            var trip = new Trip
+            {
+                Code = code,
+                TripDate = new DateTime(year, month, day),
+            };
+            _dataSource.AddTrip(trip);
+        }
+
         public void RemoveTrailPoint(string code)
         {
             _dataSource.RemoveTrailPoint(code);

@@ -29,19 +29,22 @@ namespace Vladoyak.AllInOneApp.DomainObjects
         /// Start of the trip.
         /// </summary>
         [JsonIgnore]
-        public TrailPointVisit StartTrailPointVisit => TrailPointVisits[0];
+        public TrailPointVisit StartTrailPointVisit => TrailPointVisits?[0];
 
         /// <summary>
         /// End of the trip.
         /// </summary>
         [JsonIgnore]
-        public TrailPointVisit EndTrailPointVisit => TrailPointVisits[TrailPointVisits.Count - 1];
-        
+        public TrailPointVisit EndTrailPointVisit => TrailPointVisits?[TrailPointVisits.Count - 1];
+
         /// <summary>
         /// Duration of the trip.
         /// </summary>
         [JsonIgnore]
-        public TimeSpan Duration => EndTrailPointVisit.VisitDateTime - StartTrailPointVisit.VisitDateTime;        
+        public TimeSpan Duration => (StartTrailPointVisit is null || EndTrailPointVisit is null)
+                                    ? TimeSpan.Zero :
+                                    EndTrailPointVisit.VisitDateTime - StartTrailPointVisit.VisitDateTime;
+
 
         public override string ToString()
         {

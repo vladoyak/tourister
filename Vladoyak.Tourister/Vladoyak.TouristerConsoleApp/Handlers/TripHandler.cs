@@ -21,9 +21,12 @@ namespace Vladoyak.TouristerConsoleApp.Handlers
             foreach (var trip in _app.GetTrips())
             {
                 Console.WriteLine($"  {trip}");
-                foreach (var trailPointVisit in trip.TrailPointVisits)
+                if (!(trip.TrailPointVisits is null))
                 {
-                    Console.WriteLine($"    {trailPointVisit}");
+                    foreach (var trailPointVisit in trip.TrailPointVisits)
+                    {
+                        Console.WriteLine($"    {trailPointVisit}");
+                    }
                 }
             }
         }

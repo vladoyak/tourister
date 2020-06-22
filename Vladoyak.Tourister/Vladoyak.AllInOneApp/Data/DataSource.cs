@@ -70,6 +70,11 @@ namespace Vladoyak.AllInOneApp.Data
             TrailPoints.Add(trailPoint.Code, trailPoint);
         }
 
+        public void AddTrip(Trip trip)
+        {
+            Trips.Add(trip.Code, trip);
+        }
+
         public void RemoveTrailPoint(string code)
         {
             TrailPoints.Remove(code);
